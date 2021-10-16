@@ -24,6 +24,7 @@ const languages = [
 	'id-ID',
 	'ja-JP',
 	'ja-KS',
+	'ja-PM',
 	'kab-KAB',
 	'kn-IN',
 	'ko-KR',
