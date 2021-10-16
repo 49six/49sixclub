@@ -53,6 +53,7 @@ module.exports = Object.entries(locales)
 		switch (k) {
 			case 'ja-JP': return v;
 			case 'ja-KS':
+			case 'ja-PM':
 			case 'en-US': return merge(locales['ja-JP'], v);
 			default: return merge(
 				locales['ja-JP'],
