@@ -41,14 +41,14 @@ const languages = [
 
 const primaries = {
 	'en': 'US',
-	'ja': 'JP',
 	'zh': 'CN',
+	'ja': 'JP',
 };
 
 const locales = languages.reduce((a, c) => (a[c] = yaml.load(fs.readFileSync(`${__dirname}/${c}.yml`, 'utf-8')) || {}, a), {});
 
 module.exports = Object.entries(locales)
-	.reduce((a, [k ,v]) => (a[k] = (() => {
+	.reduce((a, [k, v]) => (a[k] = (() => {
 		const [lang] = k.split('-');
 		switch (k) {
 			case 'ja-JP': return v;
